@@ -1,6 +1,6 @@
 package chapter01;
 
-public class StackStruTest {
+public class StackStructTest {
 
 
     public static void main(String[] args) {
