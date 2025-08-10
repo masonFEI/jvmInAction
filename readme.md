@@ -47,3 +47,8 @@
 - 构造器方法中指令按语句在源文件中出现的顺序执行
 - 若该类具有父类，jvm会保证子类的&lt;clinit>()执行前，父类的&lt;clinit>()已经执行完毕
 - 虚拟机必须保证一个类的&lt;clinit>()方法在多线程下被同步加锁
+
+### 类加载器的分类
+> jvm支持两种类型的类加载器，分别为引导类加载器（Bootstrap ClassLoader）和自定义类加载器（User-Defined ClassLoader）
+> 将所有派生于抽象类ClassLoader 的类加载器都划分为自定义类加载器
+> ctrl+H 查看类的继承关系
