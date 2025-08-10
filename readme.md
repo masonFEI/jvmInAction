@@ -55,18 +55,18 @@
 > 将所有派生于抽象类ClassLoader 的类加载器都划分为自定义类加载器
 > ctrl+H 查看类的继承关系
 
-- 启动类加载器（引导类加载器，Bootstrap ClassLoader）
+#### 启动类加载器（引导类加载器，Bootstrap ClassLoader）
   - 这个类加载使用c/c++语言实现的，嵌套在JVM内部
   - 并不继承自java.lang,ClassLoader,没有父加载器
   - 加载扩展类和应用程序类加载器，并指定为他们的父类加载器
   - 出于安全考虑，Bootstrap启动类加载器只加载包名为java,javax,sun等开头的类
-- 扩展类加载器（Extension ClassLoader）
+#### 扩展类加载器（Extension ClassLoader）
   - 从java.ext.dirs系统属性所指定的目录中加载类库，或从JDK的安装目录的jre/lib/ext 子目录下加载类库。如果用户创建的JAR放在此目录下，也会自动由扩展类加载器加载。
-- 应用程序类加载器（系统类加载器，AppClassLoader）
+#### 应用程序类加载器（系统类加载器，AppClassLoader）
   - 负责加载环境变量classpath或系统属性 java.class.path 指定路径下的类库
   - 该类加载是程序中默认的类加载器，一般来说，java应用的类都是由塔来完成加载
   - 通过ClassLoader#getSystemClassLoader()方法可以获取到该类加载器
-- 用户自定义类加载器
+#### 用户自定义类加载器
   - 为什么要自定义类加载器？
     - 隔离加载类（类冲突，做类的仲裁）
     - 修改类加载的方式
@@ -74,3 +74,11 @@
     - 防止源码泄露（对字节码文件加解密）
   - 开发人员可以通过继承抽象类java.lang.ClassLoader类的方式，实现自己的类加载器，以满足一些特殊的需求
   - 如果没有太过于复杂的需求，可以直接继承URLClassLoader类，这样就可以避免自己去编写findClass()方法及其获取字节码流的方式，使自定义类加载器编写更加简洁
+#### 关于ClassLoader
+> ClassLoader类，它是一个抽象类，其后所有的类加载器都继承自ClassLoader（不包括启动类加载器）
+> sun.misc.Launcher 它是java虚拟机的入口应用
+##### 获取ClassLoader的途径
+1. 获取当前类的ClassLoader: clazz.getClassLoader()
+2. 获取当前线程上下文的ClassLoader：Thread.currentThread().getContextClassLoader()
+3. 获取系统的ClassLoader: ClassLoader.getSystemClassLoader()
+4. 获取调用者的ClassLoader:DriverManager.getCallerClassLoader()
