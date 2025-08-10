@@ -49,6 +49,8 @@
 - 虚拟机必须保证一个类的&lt;clinit>()方法在多线程下被同步加锁
 
 ### 类加载器的分类
+![类加载器的分类](assets/image/类加载器的分类.jpg)
+> 上图四者之间的关系是包含关系。不是上层下层，也不是子父类的继承关系。
 > jvm支持两种类型的类加载器，分别为引导类加载器（Bootstrap ClassLoader）和自定义类加载器（User-Defined ClassLoader）
 > 将所有派生于抽象类ClassLoader 的类加载器都划分为自定义类加载器
 > ctrl+H 查看类的继承关系
