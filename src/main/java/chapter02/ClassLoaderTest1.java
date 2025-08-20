@@ -23,7 +23,8 @@ public class ClassLoaderTest1 {
         System.out.println(classLoader);//null
         System.out.println("*********************扩展类加载器*************");
         String extDirs = System.getProperty("java.ext.dirs");
-        for (String extDir : extDirs.split(";")) {
+        String separator = System.getProperty("path.separator"); // 获取系统路径分隔符
+        for (String extDir : extDirs.split(separator)) {
             System.out.println(extDir);
         }
 
