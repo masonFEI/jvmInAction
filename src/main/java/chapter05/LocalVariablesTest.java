@@ -8,15 +8,15 @@ public class LocalVariablesTest {
 
 
     public static void main(String[] args) {
-
+        LocalVariablesTest test = new LocalVariablesTest();
+        int num = 10;
+        test.test1();
     }
 
 
     public void test1() {
         Date date = new Date();
         String name1 = "atguigu.com";
-
-
     }
 
     public String test2(Date dateP, String name2) {
