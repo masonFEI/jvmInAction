@@ -12,6 +12,14 @@ public class LocalVariablesTest {
         test.test1();
     }
 
+    public static void testStatic(){
+        LocalVariablesTest test = new LocalVariablesTest();
+        Date date = new Date();
+        int count = 10;
+        System.out.println(count);
+    }
+
+
 
     public void test1() {
         Date date = new Date();
