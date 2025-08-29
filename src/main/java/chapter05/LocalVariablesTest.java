@@ -6,7 +6,6 @@ public class LocalVariablesTest {
 
     private int count = 0;
 
-
     public static void main(String[] args) {
         LocalVariablesTest test = new LocalVariablesTest();
         int num = 10;
