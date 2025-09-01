@@ -186,8 +186,9 @@
 > 局部变量表，最基本的存储单元就是Slot(变量槽)
 > 局部变量表中存放编译期可知的各种基本数据类型（8种），引用类型（reference）,returnAddress类型的变量
 > 在局部变量表里，32位以内的类型只占用一个slot（包括returnAddress类型），64位的类型（long和double）占用两个slot
-> byte,short,char在存储器被转换为int，boolean也被转换为int,0 表示false，非0表示true
+> byte,short,char在存储器被转换为int，boolean也被转换为int,0 表示false，非0表示true；
 > long和double则占据两个slot
+> ![局部变量表-slot](assets/image/局部变量表-slot.jpg)
 > 
 > jvm会为局部变量表中的每一个slot都分配一个访问索引，通过这个索引即可成功访问到局部变量表中指定的局部变量值。
 > 
