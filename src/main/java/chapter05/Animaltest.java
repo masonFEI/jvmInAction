@@ -18,7 +18,7 @@ interface Huntable {
 class Dog extends Animal implements Huntable {
     @Override
     public void eat() {
-        System.out.println("够吃骨头");
+        System.out.println("狗吃骨头");
     }
 
     @Override
@@ -27,6 +27,30 @@ class Dog extends Animal implements Huntable {
     }
 }
 
+class Cat extends Animal implements Huntable {
+
+
+    @Override
+    public void eat() {
+        System.out.println("猫吃鱼");
+    }
+
+    @Override
+    public void hunt() {
+        System.out.println("捕食耗子，天经地义");
+    }
+}
+
 
 public class Animaltest {
+
+    public void showAnimal(Animal animal) {
+        animal.eat();
+    }
+
+    public void showHunt(Huntable h) {
+        h.hunt();
+    }
+
+
 }
