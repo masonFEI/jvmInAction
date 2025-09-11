@@ -16,6 +16,7 @@ interface Huntable {
 }
 
 class Dog extends Animal implements Huntable {
+
     @Override
     public void eat() {
         System.out.println("狗吃骨头");
@@ -29,9 +30,17 @@ class Dog extends Animal implements Huntable {
 
 class Cat extends Animal implements Huntable {
 
+    public Cat() {
+        super();//表现为：早期绑定
+    }
+
+    public Cat(String name) {
+        this();//表现为：早期绑定
+    }
 
     @Override
     public void eat() {
+        super.eat();
         System.out.println("猫吃鱼");
     }
 
@@ -45,11 +54,11 @@ class Cat extends Animal implements Huntable {
 public class Animaltest {
 
     public void showAnimal(Animal animal) {
-        animal.eat();
+        animal.eat();//表现为：晚期绑定
     }
 
     public void showHunt(Huntable h) {
-        h.hunt();
+        h.hunt();//表现为：晚期绑定
     }
 
 
