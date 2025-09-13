@@ -295,5 +295,13 @@
 > 
 > 前四条指令固化在虚拟机内部，方法的调用执行不可人为干预，而invokedynamic指令则支持由用户确定方法版本。
 > 其中<span style='color:red'>invokestatic指令和invokespecial指令调用的方法称为非虚方法，其余的（final修饰的除外）称为虚方法</span>
+> 
+> 直到java8的lambda表达式的出现，invokedynamic指令的生成，在java中才有了直接的生成方式。
+
+###### 方法的调用-invokedynamic指令的使用
+- 动态类型语言与静态类型语言
+- 静态类型语言是判断变量自身的类型信息；动态类型语言是判断变量值的类型信息，变量没有类型信息，变量值才有类型信息，这是动态语言的一个重要特征
+- java是静态类型语言，invokedynamic增加了动态语言特性
+ 
 
 
