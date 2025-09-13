@@ -282,4 +282,18 @@
 > 其他方法都是虚方法。
 > 
 > 子类对象的多态性的使用前提：1.类的继承关系；2.方法的重写（接口的实现等）
+> 
+> 虚拟机中提供了以下几条方法调用指令：
+> 
+> - 普通调用指令：
+>   1. invokestatic:调用静态方法，解析阶段确定唯一方法版本
+>   2. invokespecial:调用<init>方法，私有及父类方法，解析阶段确定唯一方法版本
+>   3. invokevirtual:调用所有虚方法
+>   4. invokeinterface:调用接口方法
+> - 动态调用指令
+>   5. invokedynamic:动态解析出需要调用的方法，然后执行
+> 
+> 前四条指令固化在虚拟机内部，方法的调用执行不可人为干预，而invokedynamic指令则支持由用户确定方法版本。
+> 其中<span style='color:red'>invokestatic指令和invokespecial指令调用的方法称为非虚方法，其余的（final修饰的除外）称为虚方法</span>
+
 

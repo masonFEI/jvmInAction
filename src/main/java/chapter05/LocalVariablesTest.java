@@ -61,7 +61,7 @@ public class LocalVariablesTest {
      */
     public void test5() {
         int num;
-        System.out.println(num);// 错误信息：变量num未进行初始化
+//        System.out.println(num);// 错误信息：变量num未进行初始化
     }
 
 
