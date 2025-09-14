@@ -22,6 +22,7 @@ public class Lambda {
         Func func = s -> {
             return true;
         };
+
         lambda.lambda(func);
         lambda.lambda(s -> {
             return true;
