@@ -22,11 +22,11 @@ public class ClassLoaderTest1 {
         ClassLoader classLoader = Provider.class.getClassLoader();
         System.out.println(classLoader);//null
         System.out.println("*********************扩展类加载器*************");
-        String extDirs = System.getProperty("java.ext.dirs");
-        String separator = System.getProperty("path.separator"); // 获取系统路径分隔符
-        for (String extDir : extDirs.split(separator)) {
-            System.out.println(extDir);
-        }
+//        String extDirs = System.getProperty("java.ext.dirs");
+//        String separator = System.getProperty("path.separator"); // 获取系统路径分隔符
+//        for (String extDir : extDirs.split(separator)) {
+//            System.out.println(extDir);
+//        }
 
         // 从上面的路径中随意选择一个类，来看看它的类加载器是什么:扩展类加载器
         ClassLoader classLoader1 = ECKeyFactory.class.getClassLoader();
