@@ -5,6 +5,7 @@ package chapter08;
  * -Xms 用来设置堆空间(年轻代+老年代)的初始内存大小
  * -X 是jvm的运行蚕食
  * ms 是 memory start
+ * <p>
  * -Xmx 用来设置堆空间(年轻代+老年代)的最大内存大小
  * -X 是jvm的运行蚕食
  * mx 是 memory max
