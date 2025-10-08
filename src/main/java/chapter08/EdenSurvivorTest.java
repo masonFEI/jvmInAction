@@ -11,6 +11,8 @@ package chapter08;
  *
  * -NewRatio: 设置新生代与老年代的比例，默认值为2
  *
+ * -XX:SurvivorRatio: 设置新生代中Edan区与Survivor区的比例
+ *
  * -XX:-UseAdaptiveSizePolicy 关闭自适应的内存分配策略
  * -XX:+UseAdaptiveSizePolicy 开启自适应的内存分配策略，默认
  *
