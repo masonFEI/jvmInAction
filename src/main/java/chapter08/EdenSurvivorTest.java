@@ -11,7 +11,8 @@ package chapter08;
  *
  * -NewRatio: 设置新生代与老年代的比例，默认值为2
  *
- * -XX -UseAdoptiveSizePolicy
+ * -XX:-UseAdaptiveSizePolicy 关闭自适应的内存分配策略
+ * -XX:+UseAdaptiveSizePolicy 开启自适应的内存分配策略，默认
  *
  * @author johnny.fei
  * @version 1.0.0
