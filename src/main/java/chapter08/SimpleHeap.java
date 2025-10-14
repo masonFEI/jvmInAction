@@ -3,7 +3,7 @@ package chapter08;
 public class SimpleHeap {
 
 
-    private int id;
+    private final int id;
 
     public SimpleHeap(int id) {
         this.id = id;

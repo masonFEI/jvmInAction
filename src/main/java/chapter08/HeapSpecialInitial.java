@@ -1,14 +1,13 @@
 package chapter08;
 
-
 /**
  * 1.设置堆空间大小的参数
  * -Xms 用来设置堆空间(年轻代+老年代)的初始内存大小
- * -X 是jvm的运行蚕食
+ * -X 是jvm的运行参数
  * ms 是 memory start
  * <p>
  * -Xmx 用来设置堆空间(年轻代+老年代)的最大内存大小
- * -X 是jvm的运行蚕食
+ * -X 是jvm的运行参数
  * mx 是 memory max
  *
  * 2.默认堆空间的大小
