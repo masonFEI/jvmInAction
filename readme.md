@@ -423,3 +423,22 @@
 > 整堆收集（Full GC）:收集整个java堆和方法区的垃圾收集
 > 
 > java堆分代的唯一理由就是优化GC性能。
+>
+###### 内存分配策略
+> 动态对象年龄判断
+> 
+>   如果Survivor区中相同年龄的所有对象大小的总和大于Survivor空间的一半，年龄大于或等于该年龄的对象可以直接进入老年代，无需等到MaxTenuringThreshold中要求的年龄
+>
+> 空间分配担保
+> 
+> -XX:HandlePromotionFailure
+>
+###### TLAB(Thread Local Allocation Buffer)
+> 为什么有TLAB?
+> 
+> 为避免多个线程操作同一地址，需要使用加锁等机制，进而影响分配速度
+
+> 什么是TLAB？
+> 从内存模型而不是垃圾收集的角度，对Eden区域继续进行划分，JVM为<span style="color:red">每个线程分配了一个私有缓存区域</span>,它包含在Eden空间内。
+> 
+> 多线程同时分配内存时，使用TLAB可以避免一系列的线程安全问题，同时还能够提升内存分配的吞吐量，因此我们将这种内存分配方式称之为<span style="color:red">快速分配策略</span>。
