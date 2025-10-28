@@ -14,7 +14,7 @@ package chapter08;
  * -XX:MaxTenuringThreshold:设置新生代垃圾的最大年龄
  * -XX:+PrintGCDetails:输出详细的GC处理日志
  * 打印gc简要信息：1 -XX:PrintGC 2 -verbose:gc
- * -XX:HandlePromotionFailure:是否设置空间分配担保
+ * -XX:HandlePromotionFailure:是否设置空间分配担保（jdk7 以后，此参数就没有影响了，默认为true）
  *
  */
 public class HeapArgsTest {
