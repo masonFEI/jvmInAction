@@ -448,3 +448,7 @@
 > JVM确实是将TLAB作为内存分配的首选，仅占有整个Eden空间的1%
 > 
 > ![TLAB分配流程](assets/image/TLAB分配流程.jpg)
+
+###### 堆是分配对象存储的唯一选择嘛
+> 不是
+> 随着JIT编译期的发展与<span style="color:red">逃逸分析技术</span>逐渐成熟，<span style="color:red">栈上分配，标量替换优化技术</span>将会导致一些微妙的变化，所有的对象都分配到堆上也渐渐变得不那么绝对了。
