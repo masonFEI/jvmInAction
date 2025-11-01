@@ -3,6 +3,7 @@ package chapter08;
 
 /**
  * 栈上分配测试
+ * -Xms1G -Xmx1G -XX:-DoEscapeAnalysis -XX:+PrintGCDetails
  */
 public class StackAllocation {
 
@@ -10,7 +11,7 @@ public class StackAllocation {
     public static void main(String[] args) {
 
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 100000000; i++) {
+        for (int i = 0; i < 10000000; i++) {
             alloc();
         }
         long end = System.currentTimeMillis();
