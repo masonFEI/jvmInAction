@@ -635,3 +635,12 @@
 > 
 > String代表不可变的字符序列，简称不可变性。
 > 通过字面量的方式（区别于new）给一个字符串赋值，此时的字符串值声明在字符串常量池中。 
+> 
+> 字符串常量池中是不会存储相同内容的字符串的。
+> String的String Poo是一个固定大小的Hashtable. 使用-XX:StringTableSize可设置StringTable的长度
+
+###### String的内存分配
+> String类型的常量池比较特殊，它的主要使用方式有两种：
+> 1. 直接使用双引号声明出来的String对象会直接存储在常量池中。
+> 2. 如果不是用双引号声明的String对象，可以使用String提供的intern()方法。
+
