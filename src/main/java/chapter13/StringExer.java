@@ -10,7 +10,7 @@ public class StringExer {
         str = "test ok";
         ch[0] = 'b';
     }
-
+ 
 
     public static void main(String[] args) {
         StringExer ex = new StringExer();
