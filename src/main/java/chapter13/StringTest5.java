@@ -8,7 +8,7 @@ public class StringTest5 {
         String s2 = "hadoop";
         String s3 = "javaEEhadoop";
         String s4 = "javaEE" + "hadoop";
-        // 如果拼接符号的前后出现了变量，则相当于在堆空间中new String(),具体的内容为拼接的结果：javaEEhadoop
+        // 如果拼接符号的前后出现了变量，则相当于在堆空间中 new String(),具体的内容为拼接的结果：javaEEhadoop
         String s5 = s1 + "hadoop";
         String s6 = "javaEE" + s2;
         String s7 = s1 + s2;
