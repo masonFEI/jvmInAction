@@ -17,7 +17,7 @@ public class StringTest5 {
          * 1.StringBuilder s = new StringBuilder();
          * 2. s.append(s1);
          * 3. s.append(s2);
-         * 4. s.toString();-> 约等于 new String(“javaEEhadoop”);
+         * 4. s.toString(); -> 约等于 new String(“javaEEhadoop”);
          *
          * 补充：在jdk5.0之后使用的是StringBuilder，在jdk5.0之前使用的是StringBuffer
          */
