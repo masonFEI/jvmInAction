@@ -40,14 +40,14 @@ public class StringTest5 {
 
     /**
      * 1.字符串拼接操作不一定使用的是StringBuilder
-     *    如果拼接符号左右两边都是字符串常量或常量引用，则仍然使用编译期优化，即非StringBuilder的方式。
+     * 如果拼接符号左右两边都是字符串常量或常量引用，则仍然使用编译期优化，即非StringBuilder的方式。
      * 2.针对于final修饰类，方法，基本数据类型，引用数据类型·的量的结构时，能使用上final的时候建议使用上。
      */
-    public void test4(){
+    public void test4() {
         final String s1 = "a";
         final String s2 = "b";
         String s3 = "ab";
-        String s4 = s1+s2;
+        String s4 = s1 + s2;
         System.out.println(s3 == s4);
     }
 
