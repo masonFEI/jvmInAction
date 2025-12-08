@@ -654,4 +654,12 @@
 > 3. 只要其中有一个是变量，结果就在堆中（new String()）。变量拼接的原理是StringBuilder
 > 4. 如果拼接的结果调用intern()方法，则主动将常量池中还没有的字符串对象放入池中，并返回此对象地址。
 > 5. StringBuilder可以设置需要拼接的字符串长度。
-
+###### intern的使用
+> s.intern()==t.intern() 等价于 s.equals(t)
+> 如果不是用双引号声明的String对象，可以使用String提供的intern方法
+> interned String 确保在内存中只有一份
+> 
+> 如何保证变量s指向的是字符串常量池中的数据？
+> 方法1：String s ="shkstart" //字面量定义的方式
+> 方法2：String s = new String("shkstart").intern();
+>       String s = new StringBuilder("shkstart").toString().intern();
