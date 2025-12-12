@@ -14,8 +14,6 @@ public class StringIntern {
         s3.intern();//在字符串常量池中生成“11”
         String s4 = "11";//s4变量记录的地址：使用的是上一行代码执行时，在常量池中生成的“11”的地址
         System.out.println(s3 == s4);// true
-
-
     }
 
 
