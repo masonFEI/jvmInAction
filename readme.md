@@ -663,3 +663,7 @@
 > 方法1：String s ="shkstart" //字面量定义的方式
 > 方法2：String s = new String("shkstart").intern();
 >       String s = new StringBuilder("shkstart").toString().intern();
+> 
+> 字符串常量池中，存放的字符串的引用地址，字符串对象本身还在堆中；
+> 
+> ![String.intern的使用](assets/image/String.intern的使用.jpg)
