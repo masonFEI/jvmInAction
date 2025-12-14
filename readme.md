@@ -669,3 +669,10 @@
 > ![String.intern的使用](assets/image/String.intern的使用.jpg)
 > 
 > 对于程序中大量存在的字符串，尤其其中存在很多重复字符串时，使用intern()可以节省内存
+###### G1垃圾收集器的String去重操作
+> 当垃圾收集器工作的时候，会访问堆上存活的对象。对每一个访问的对象都会检查是否是候选的要去重的String对象。
+> 
+> 使用一个hashtable来记录所有的被String对象使用的不重复的char数据。
+> 当去重的时候，会查这个hashtable,来看堆上是否已经存在一个一模一样的char数据。
+> 
+> UseStringDeduplication(bool):开启Stringq去重，默认是不开启，需要手动开启。
