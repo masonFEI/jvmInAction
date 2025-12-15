@@ -676,3 +676,4 @@
 > 当去重的时候，会查这个hashtable,来看堆上是否已经存在一个一模一样的char数据。
 > 
 > UseStringDeduplication(bool):开启Stringq去重，默认是不开启，需要手动开启。
+#### 14章 垃圾回收概述
