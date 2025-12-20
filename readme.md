@@ -675,7 +675,7 @@
 > 使用一个hashtable来记录所有的被String对象使用的不重复的char数据。
 > 当去重的时候，会查这个hashtable,来看堆上是否已经存在一个一模一样的char数据。
 > 
-> UseStringDeduplication(bool):开启Stringq去重，默认是不开启，需要手动开启。
+> UseStringDeduplication(bool):开启String去重，默认是不开启，需要手动开启。
 #### 14章 垃圾回收概述
 > 垃圾是指在运行程序中没有任何指针指向的对象。
 > 没有GC就不能保证应用程序的正常进行。
