@@ -5,9 +5,7 @@ package chapter08;
  */
 public class HeapDemo {
 
-
     public static void main(String[] args) {
-
 
         System.out.println("start...");
         try {
@@ -19,6 +17,5 @@ public class HeapDemo {
         System.out.println("end");
 
     }
-
 
 }

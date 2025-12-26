@@ -7,7 +7,7 @@ public class StringTest {
         System.out.println("hello");
 
         StringTest stringTest = new StringTest();
-        System.out.println(stringTest.getClass().getClassLoader());//sun.misc.Launcher$AppClassLoader@18b4aac2
+        System.out.println(stringTest.getClass().getClassLoader());// sun.misc.Launcher$AppClassLoader@18b4aac2
     }
 
 }

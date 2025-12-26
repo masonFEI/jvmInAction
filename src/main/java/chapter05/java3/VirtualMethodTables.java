@@ -1,6 +1,5 @@
 package chapter05.java3;
 
-
 interface FriendLy {
 
     void sayHello();
@@ -61,7 +60,6 @@ class CockerSpabiel extends Dog implements FriendLy {
     }
 
 }
-
 
 public class VirtualMethodTables {
 }

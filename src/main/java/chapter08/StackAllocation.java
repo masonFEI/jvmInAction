@@ -1,12 +1,10 @@
 package chapter08;
 
-
 /**
  * 栈上分配测试
  * -Xms1G -Xmx1G -XX:-DoEscapeAnalysis -XX:+PrintGCDetails
  */
 public class StackAllocation {
-
 
     public static void main(String[] args) {
 
@@ -24,18 +22,14 @@ public class StackAllocation {
             e.printStackTrace();
         }
 
-
     }
-
 
     private static void alloc() {
-        User user = new User();//未发生逃逸
+        User user = new User();// 未发生逃逸
     }
-
 
     static class User {
 
     }
-
 
 }

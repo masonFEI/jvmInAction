@@ -1,7 +1,9 @@
 package chapter15;
 
+/**
+ * 引用计数法的垃圾回收算法测试
+ */
 public class RefCountGC {
-
 
     Object reference = null;
 
@@ -23,7 +25,6 @@ public class RefCountGC {
         } catch (Exception e) {
 
         }
-
 
     }
 

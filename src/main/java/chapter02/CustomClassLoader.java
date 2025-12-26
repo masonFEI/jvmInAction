@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 
 public class CustomClassLoader extends ClassLoader {
 
-
     /**
      * Finds the class with the specified <a href="#name">binary name</a>.
      * This method should be overridden by class loader implementations that
@@ -40,7 +39,6 @@ public class CustomClassLoader extends ClassLoader {
         return null;
     }
 
-
     public static void main(String[] args) {
         CustomClassLoader customClassLoader = new CustomClassLoader();
 
@@ -51,7 +49,6 @@ public class CustomClassLoader extends ClassLoader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 

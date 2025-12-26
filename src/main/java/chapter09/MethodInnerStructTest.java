@@ -8,11 +8,11 @@ import java.io.Serializable;
 public class MethodInnerStructTest extends Object implements Comparable<String>, Serializable {
 
     // 属性
-    public int num = 10;
+    public int            num = 10;
     private static String str = "测试方法的内部结构";
 
     // 构造器
-    //方法
+    // 方法
     public void test1() {
         int count = 20;
         System.out.println("count = " + count);
@@ -28,7 +28,6 @@ public class MethodInnerStructTest extends Object implements Comparable<String>,
         }
         return result;
     }
-
 
     /**
      * Compares this object with the specified object for order.  Returns a

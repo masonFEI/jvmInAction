@@ -2,16 +2,14 @@ package chapter05;
 
 public class OperandStackTest {
 
-
     public void testAddOperation() {
-        // byte,short,char,boolean:都以1int型来保存3
+        // byte,short,char,boolean:都以1int型来保存
         byte i = 15;
         int j = 8;
         int k = i + j;
 
         int m = 800;
     }
-
 
     public int getSum() {
         int m = 10;
@@ -55,8 +53,6 @@ public class OperandStackTest {
         int i9 = 10;
         int i10 = i9++ + ++i9;
 
-
     }
-
 
 }

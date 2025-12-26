@@ -1,6 +1,5 @@
 package chapter08;
 
-
 /**
  * 逃逸分析
  * <p>
@@ -25,7 +24,6 @@ public class EscapeAnalysis {
     public void setObj() {
         this.obj = new EscapeAnalysis();
     }
-
 
     /**
      * 引用成员变量的值，发生逃逸

@@ -23,9 +23,7 @@ class Father {
         System.out.println("father 普通方法");
     }
 
-
 }
-
 
 public class Son extends Father {
 
@@ -82,7 +80,6 @@ public class Son extends Father {
     }
 
 }
-
 
 interface MethodInterface {
     void methodA();

@@ -11,7 +11,6 @@ package chapter05;
  */
 public class StringBuilderTets {
 
-
     // s1的声明方式是线程安全的
     public static void method1() {
         // StringBuilder；线程不安全
@@ -20,7 +19,6 @@ public class StringBuilderTets {
         s1.append("b");
         // ...
     }
-
 
     // sBuilder的操作过程：是线程不安全的
     public static void method2(StringBuilder sBuilder) {
@@ -36,7 +34,6 @@ public class StringBuilderTets {
         s1.append("b");
         return s1;
     }
-
 
     public static void main(String[] args) {
         StringBuilder s = new StringBuilder();

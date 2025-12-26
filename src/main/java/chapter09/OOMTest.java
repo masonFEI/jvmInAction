@@ -3,12 +3,10 @@ package chapter09;
 import jdk.internal.org.objectweb.asm.ClassWriter;
 import jdk.internal.org.objectweb.asm.Opcodes;
 
-
 /**
  * -XX:MetaspaceSize=10m -XX:MaxMetaspaceSize=10m
  */
 public class OOMTest extends ClassLoader {
-
 
     public static void main(String[] args) {
         int j = 0;
@@ -22,13 +20,12 @@ public class OOMTest extends ClassLoader {
                 // 返回byte[]
                 byte[] code = classWriter.toByteArray();
                 // 类的加载
-                test.defineClass("class" + i, code, 0, code.length);//Class对象
+                test.defineClass("class" + i, code, 0, code.length);// Class对象
                 j++;
             }
         } finally {
             System.out.println(j);
         }
     }
-
 
 }

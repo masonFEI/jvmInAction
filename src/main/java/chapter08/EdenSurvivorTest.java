@@ -22,7 +22,6 @@ package chapter08;
  */
 public class EdenSurvivorTest {
 
-
     public static void main(String[] args) {
         System.out.println("我只是来打个酱油");
         try {

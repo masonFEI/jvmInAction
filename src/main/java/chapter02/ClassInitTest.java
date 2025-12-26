@@ -17,5 +17,4 @@ public class ClassInitTest {
         System.out.println(ClassInitTest.number);
     }
 
-
 }

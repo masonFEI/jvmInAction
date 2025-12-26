@@ -1,6 +1,5 @@
 package chapter09;
 
-
 /**
  *  静态引用对应的对象实例始终都存在堆空间
  *
@@ -9,16 +8,15 @@ package chapter09;
  */
 public class StaticFieldTest {
 
-
-    private static byte[] arr = new byte[1024 * 1024 * 100];// 100mb
+    private static final byte[] arr = new byte[1024 * 1024 * 100];// 100mb
 
     public static void main(String[] args) {
         System.out.println(StaticFieldTest.arr);
-//        try {
-//            Thread.sleep(1000000);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        // try {
+        // Thread.sleep(1000000);
+        // } catch (Exception e) {
+        // e.printStackTrace();
+        // }
     }
 
 }

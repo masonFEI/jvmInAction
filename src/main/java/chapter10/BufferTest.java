@@ -1,6 +1,5 @@
 package chapter10;
 
-
 import java.nio.ByteBuffer;
 import java.util.Scanner;
 
@@ -14,7 +13,7 @@ import java.util.Scanner;
  */
 public class BufferTest {
 
-    private static final int BUFFER = 1024 * 1024 * 1024;//1GB
+    private static final int BUFFER = 1024 * 1024 * 1024;// 1GB
 
     public static void main(String[] args) {
         // 使用直接内存
@@ -31,6 +30,5 @@ public class BufferTest {
         scanner.next();
 
     }
-
 
 }

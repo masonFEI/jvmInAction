@@ -8,13 +8,11 @@ package chapter05;
  */
 public class StackFrameTest {
 
-
     public static void main(String[] args) {
         StackFrameTest stackFrameTest = new StackFrameTest();
         stackFrameTest.method1();
         System.out.println("main 正常结束。。。");
     }
-
 
     public void method1() {
         System.out.println("method1开始执行。。。");
@@ -37,6 +35,5 @@ public class StackFrameTest {
         System.out.println("method3执行结束。。。");
         return j;
     }
-
 
 }

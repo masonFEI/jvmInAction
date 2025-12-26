@@ -8,7 +8,6 @@ package chapter09;
  */
 public class MethodAreaDemo {
 
-
     public static void main(String[] args) {
         System.out.println("start...");
 

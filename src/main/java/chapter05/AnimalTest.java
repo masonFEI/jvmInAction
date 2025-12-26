@@ -1,6 +1,5 @@
 package chapter05;
 
-
 /**
  * 说明早期绑定和晚期绑定的例子
  */
@@ -31,11 +30,11 @@ class Dog extends Animal implements Huntable {
 class Cat extends Animal implements Huntable {
 
     public Cat() {
-        super();//表现为：早期绑定
+        super();// 表现为：早期绑定
     }
 
     public Cat(String name) {
-        this();//表现为：早期绑定
+        this();// 表现为：早期绑定
     }
 
     @Override
@@ -50,16 +49,14 @@ class Cat extends Animal implements Huntable {
     }
 }
 
-
-public class Animaltest {
+public class AnimalTest {
 
     public void showAnimal(Animal animal) {
-        animal.eat();//表现为：晚期绑定
+        animal.eat();// 表现为：晚期绑定
     }
 
     public void showHunt(Huntable h) {
-        h.hunt();//表现为：晚期绑定
+        h.hunt();// 表现为：晚期绑定
     }
-
 
 }

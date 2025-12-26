@@ -9,7 +9,6 @@ import java.util.List;
  */
 public class GCTest {
 
-
     public static void main(String[] args) {
         int i = 0;
 
@@ -26,6 +25,5 @@ public class GCTest {
             System.out.println("遍历次数为：" + i);
         }
     }
-
 
 }

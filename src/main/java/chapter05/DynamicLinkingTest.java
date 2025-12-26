@@ -1,8 +1,6 @@
 package chapter05;
 
 public class DynamicLinkingTest {
-
-
     int num = 10;
 
     public void methodA() {
