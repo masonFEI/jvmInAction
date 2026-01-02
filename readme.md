@@ -1183,5 +1183,55 @@
 > 2. Survivor区：新生代对象存活区
 > 3. 老年代区：老年代对象存放区
 > 4. 大对象区（humongous）：大对象直接分配区,如果对象大小超过Region的一半，则直接分配在大对象区；G1的大多数行为都把H区作为老年代的一部分来看待
-> 
-> 
+
+###### G1回收器垃圾回收过程
+
+> 年轻代GC(Young GC):
+>
+> &emsp;&emsp;是一个并行的独占式收集器（会STW ）;当Eden区被分配满时，触发年轻代GC;
+>
+> 老年代并发标记过程(Concurrent Marking)：
+>
+> &emsp;&emsp;当堆内存使用达到一定值（默认45%）时，开始老年代并发标记过程
+>
+> 混合回收（Mixed GC）：
+> &emsp;&emsp;在并发标记过程结束后，紧接着会进行一次混合回收；
+> &emsp;&emsp;混合回收会回收年轻代的Eden区和Survivor区，同时还会回收部分老年代的Region；
+> &emsp;&emsp;老年代中，垃圾占内存分段比例较高的Region会被优先回收
+> （-XX:G1MixedGCLiveThresholdPercent,默认为65%，意思是垃圾占内存分段比例要达到65%才会被回收）
+
+###### 记忆集与写屏障
+
+> 记忆集（Remembered Set,简称RSet）是G1垃圾回收器用来跟踪不同Region之间引用关系的数据结构。
+> 每个Region都有一个与之对应的记忆集，记忆集记录了所有引用该Region中对象的引用位置。
+> 记忆集的维护是通过写屏障（Write Barrier）来实现的。
+> 写屏障是一段插入到对象引用写操作之前的代码。
+> 当程序对象引用进行写操作时，写屏障代码会先执行，检查被写入的引用是否指向了不同Region中的对象，
+> 如果是，则将这个引用的位置记录到对应Region的记忆集中。
+
+###### 7种经典的垃圾回收器的总结
+
+| 垃圾收集器        | 分类      | 作用位置       | 使用算法         | 特点     | 适用场景                    |
+|--------------|---------|------------|--------------|--------|-------------------------|
+| Serial       | 串行运行    | 作用于新生代     | 复制算法         | 响应速度优先 | 适用于单CPU环境下的client模式     |
+| ParNew       | 并行运行    | 作用于新生代     | 复制算法         | 响应速度优先 | 多CPU环境Server模式下与CMS配合使用 |
+| Parallel     | 并行运行    | 作用于新生代     | 复制算法         | 吞吐量优先  | 适用于后台运算而不需要太多交互的场景      |
+| Serial Old   | 串行运行    | 作用于老年代     | 标记-压缩算法      | 响应速度优先 | 适用于单CPU环境下的Client模式     |
+| Parallel Old | 并行运行    | 作用于老年代     | 标记-压缩算法      | 吞吐量优先  | 适用于后台运算而不需要太多交互的场景      |
+| CMS          | 并发运行    | 作用于老年代     | 标记-清除算法      | 响应速度优先 | 适用于互联网或B/S业务            |
+| G1           | 并发、并行运行 | 作用于新生代、老年代 | 标记-压缩算法、复制算法 | 响应速度优先 | 面向服务端应用                 |
+
+##### GC日志的参数
+
+> -XX；+PrintGCDetails
+> -Xloggc:<file-path> 输出日志到指定文件
+> -XX:+PrintGCDateStamps 输出日志的时间戳
+> -XX:+PrintGCTimeStamps 输出日志的相对时间
+> -XX:+PrintGCApplicationStoppedTime   输出GC引起的应用程序停顿时间
+> -XX:+PrintGCApplicationConcurrentTime 输出GC引起的应用程序并发执行时间
+> -XX:+PrintHeapAtGC 输出GC前后的堆信息
+> -XX:+PrintTenuringDistribution 输出新生代对象年龄分布
+> -XX:+PrintPromotionFailure 输出晋升失败的信息
+> -XX:+UseGCLogFileRotation 开启GC日志轮转
+> -XX:NumberOfGCLogFiles=<N> 设置GC日志文件的数量
+> -XX:GCLogFileSize=<size> 设置GC日志文件的大小
