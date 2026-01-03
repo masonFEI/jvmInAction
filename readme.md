@@ -1227,7 +1227,7 @@
 > -Xloggc:<file-path> 输出日志到指定文件
 > -XX:+PrintGCDateStamps 输出日志的时间戳
 > -XX:+PrintGCTimeStamps 输出日志的相对时间
-> -XX:+PrintGCApplicationStoppedTime   输出GC引起的应用程序停顿时间
+> -XX:+PrintGCApplicationStoppedTime 输出GC引起的应用程序停顿时间
 > -XX:+PrintGCApplicationConcurrentTime 输出GC引起的应用程序并发执行时间
 > -XX:+PrintHeapAtGC 输出GC前后的堆信息
 > -XX:+PrintTenuringDistribution 输出新生代对象年龄分布
@@ -1235,3 +1235,15 @@
 > -XX:+UseGCLogFileRotation 开启GC日志轮转
 > -XX:NumberOfGCLogFiles=<N> 设置GC日志文件的数量
 > -XX:GCLogFileSize=<size> 设置GC日志文件的大小
+
+##### shenandoah垃圾回收器
+
+> Shenandoah是Red Hat公司开发的一款低延迟垃圾回收器，目标是实现低于10ms的GC停顿时间。
+
+##### ZGC垃圾回收器
+
+> ZGC（Z Garbage Collector）是JDK 11引入的一款可扩展的低延迟垃圾回收器，目标是实现低于10ms的GC停顿时间。
+> ZGC采用标记-整理算法，支持多线程并发回收，能够处理大规模堆内存（从几百MB到几TB）。
+> ZGC通过颜色标记和指针重定向技术，实现了对象的并发移动和内存整理，最大限度地减少了GC停顿时间。
+> ZGC还引入了区域化内存管理，将堆内存划分为多个区域（Region），以提高内存分配和回收的效率。暂时不设置分代，
+> ZGC适用于对延迟敏感的应用场景，如大数据处理、实时分析和高频交易等。
