@@ -6,6 +6,9 @@ package part02.chapter01;
 
 /**
  * Demo
+ * <p>
+ * 全类名：part02.chapter01.Demo
+ * 全限定名: part02.chapter01.Demo
  *
  * @author feixuanyu
  * @version 1.0.0
