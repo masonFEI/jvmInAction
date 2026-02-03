@@ -7,7 +7,7 @@ package part02.chapter02;
 import org.junit.Test;
 
 /**
- * ArithmeticTest
+ * 算数指令Test
  *
  * @author feixuanyu
  * @version 1.0.0
@@ -33,7 +33,7 @@ public class ArithmeticTest {
 
     public void method3(int j) {
         int i = 100;
-//        i = i + 10;
+        // i = i + 10;
 
         i += 10;
     }
@@ -53,7 +53,7 @@ public class ArithmeticTest {
     public void method6() {
         int i = 10;
         i++;
-//        ++i;
+        // ++i;
     }
 
     public void method7() {
@@ -66,8 +66,7 @@ public class ArithmeticTest {
     public void nethod8() {
         int i = 10;
         i = i++;
-        System.out.println(i);//10
+        System.out.println(i);// 10
     }
-
 
 }
