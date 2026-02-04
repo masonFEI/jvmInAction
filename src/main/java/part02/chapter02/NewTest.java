@@ -56,6 +56,14 @@ public class NewTest {
         System.out.println(arr.length);
     }
 
+    public String checkCast(Object obj) {
+        if (obj instanceof String) {
+            return (String) obj;
+        } else {
+            return null;
+        }
+    }
+
 }
 
 class Order {
