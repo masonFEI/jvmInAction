@@ -60,4 +60,14 @@ public class MethodInvokeReturnTest {
         t1.run();
     }
 
+    // 方法的返回指令
+    public int returnInt() {
+        int i = 500;
+        return i;
+    }
+
+    public double returnDouble() {
+        return 0.0;
+    }
+
 }
