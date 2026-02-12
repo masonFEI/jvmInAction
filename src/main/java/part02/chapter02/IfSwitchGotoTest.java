@@ -111,5 +111,28 @@ public class IfSwitchGotoTest {
         }
     }
 
+    // 4.无条件跳转指令
+    public void whileInt() {
+        int i = 0;
+        while (i < 100) {
+            String s = "atguigu.com";
+            i++;
+        }
+    }
+
+    public void printFor() {
+        short i;
+        for (i = 0; i < 100; i++) {
+            String s = "atguigu.com";
+        }
+    }
+
+    public void doWhileTest() {
+        int i = 1;
+        do {
+            i++;
+        } while (i <= 100);
+    }
+
 
 }
