@@ -28,4 +28,14 @@ public class LinkingTest {
 
     public static final String constStr1 = new String("CONST");
 
+
+    public Object getObj() {
+        return null;
+    }
+
+
+    public void print1() {
+        System.out.println("hello world");
+    }
+
 }
