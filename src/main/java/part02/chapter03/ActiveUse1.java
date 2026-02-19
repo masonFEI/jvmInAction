@@ -11,6 +11,7 @@ import java.util.Objects;
  * 测试类的主动使用：意味着会调用类的<clinit>(),即执行了类的初始化
  * <p>
  * 1.当创建一个类的实例时，比如使用new关键字，或者通过反射、克隆、反序列化
+ * 2.当调用类的静态方法时，即当使用了字节码invokestatic指令时
  *
  * @author feixuanyu
  * @version 1.0.0
@@ -19,8 +20,7 @@ import java.util.Objects;
 public class ActiveUse1 {
 
     public static void main(String[] args) {
-        Order order = new Order();
-        test2();
+        test3();
     }
 
     // 序列化的过程：
@@ -59,7 +59,10 @@ public class ActiveUse1 {
                 e.printStackTrace();
             }
         }
+    }
 
+    public static void test3() {
+        Order.method();
     }
 
 }
@@ -67,5 +70,9 @@ public class ActiveUse1 {
 class Order implements Serializable {
     static {
         System.out.println("Order类的初始化过程");
+    }
+
+    public static void method() {
+        System.out.println("Order method");
     }
 }
