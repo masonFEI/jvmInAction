@@ -7,7 +7,7 @@ package part02.chapter02;
 import javax.xml.crypto.Data;
 
 /**
- * LoadAndStoreTest
+ * 加载与存储指令
  *
  * @author feixuanyu
  * @version 1.0.0

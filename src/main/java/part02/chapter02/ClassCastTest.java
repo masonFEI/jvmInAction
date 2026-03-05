@@ -5,7 +5,7 @@
 package part02.chapter02;
 
 /**
- * ClassCastTest
+ * 类型转换指令
  *
  * @author feixuanyu
  * @version 1.0.0

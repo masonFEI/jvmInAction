@@ -7,7 +7,7 @@ package part02.chapter02;
 import java.io.File;
 
 /**
- * NewTest
+ * 对象的创建与访问指令
  *
  * @author feixuanyu
  * @version 1.0.0
@@ -32,6 +32,7 @@ public class NewTest {
         System.out.println("Hello, World!");
     }
 
+    //2. 字段访问指令
     public void setOrderId() {
         Order order = new Order();
         order.id = 1001;
@@ -67,6 +68,6 @@ public class NewTest {
 }
 
 class Order {
-    int           id;
+    int id;
     static String name;
 }
