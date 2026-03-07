@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * ExceptionTest
+ * 异常处理与异常表
  *
  * @author feixuanyu
  * @version 1.0.0
