@@ -21,10 +21,12 @@ public class ChangeHashCode1 {
         Point cc = new Point();
         cc.setX(10);// hashcode = 41
         hs.add(cc);
-        cc.setX(20);// hashcode = 51
+        cc.setX(20);// hashcode = 51,此行为导致了内存泄漏
         System.out.println("hs.remove = " + hs.remove(cc));// false
         hs.add(cc);
         System.out.println("hs.size = " + hs.size());// size =2
+
+        System.out.println(hs);
     }
 
 }
