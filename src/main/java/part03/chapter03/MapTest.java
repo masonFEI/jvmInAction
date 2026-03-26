@@ -35,8 +35,8 @@ public class MapTest {
         String ref4 = new String("object4");
         wMap.put(ref1, "cacheObject1");
         wMap.put(ref2, "cacheObject2");
-        wMap.put(ref3, "cacheObject3");
-        wMap.put(ref4, "cacheObject4");
+        map.put(ref3, "cacheObject3");
+        map.put(ref4, "cacheObject4");
 
         System.out.println("String引用ref1,ref2,ref3,ref4 消失");
     }
