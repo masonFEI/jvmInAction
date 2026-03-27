@@ -21,7 +21,7 @@ public class OOMTest {
         ArrayList<Picture> list = new ArrayList<Picture>();
         while (true) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(5);
             } catch (Exception e) {
                 e.printStackTrace();
             }
