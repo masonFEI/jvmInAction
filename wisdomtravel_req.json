@@ -1,0 +1,111 @@
+{
+    "aBTests": [
+        { "expNo": "20260508_ContinuousOrderCashback", "result": "D" },
+        { "expNo": "20231102_discountStrengthen",     "result": "B" },
+        { "expNo": "20231024_discount",                "result": "A" },
+        { "expNo": "20240130_huixingSceneChange",      "result": "B" },
+        { "expNo": "20250318_dynamicPackagingWxWisdom","result": "Z" },
+        { "expNo": "20260327_ConnectSplicingRules",    "result": "C" },
+        { "expNo": "20260424_AirportSubsidy",          "result": "A" }
+    ],
+    "caller": "book15",
+    "date": "2026-07-29",
+    "diyIsClosed": false,
+    "entrance": 0,
+    "extInfo": {
+        "interceptAction": "0",
+        "crawlerCheckCode": "0"
+    },
+    "flightParamList": [
+        {
+            "aBTests": [
+                { "$ref": "$.aBTests[0]" },
+                { "$ref": "$.aBTests[1]" },
+                { "$ref": "$.aBTests[2]" },
+                { "$ref": "$.aBTests[3]" },
+                { "$ref": "$.aBTests[4]" },
+                { "$ref": "$.aBTests[5]" },
+                { "$ref": "$.aBTests[6]" }
+            ],
+            "arrivalAirportCode": "CAN",
+            "arrivalCityCode": "CAN",
+            "arriveDate": "2026-07-29",
+            "arriveTime": "09:25",
+            "departDate": "2026-07-29",
+            "departTime": "06:55",
+            "departureAirportCode": "PVG",
+            "departureCityCode": "SHA",
+            "diyIsClosed": false,
+            "entrance": 0,
+            "flightNo": "CZ3549",
+            "linkTrackerId": "",
+            "passengerType": 0,
+            "plat": 852,
+            "refId": 319527329,
+            "requestContext": {},
+            "stageNo": 1,
+            "tag": "ZtYxLgD8gfr1KLexC4RbJ7TwYnKT7qYg9EnrVjsdFruyyXXOyV94jn1DnLkxYVCSlHnIi3eVpZkUPCXBd6qsA6tR479zDdvtLdIdgGmyWrhc0H564zb84bAogHdBTBy4KqDbKmA6z9asnbvJqvVUUm0",
+            "user": {
+                "contextId": "o498X0UTybMbTyRT5BvRUfLlYurQ-1785205809679",
+                "deviceId": "",
+                "memberId": "1205363075",
+                "openId": "o498X0UTybMbTyRT5BvRUfLlYurQ",
+                "unionId": "ohmdTt4cara6ru82FTonOUcHmLTQ"
+            }
+        },
+        {
+            "aBTests": [
+                { "$ref": "$.aBTests[0]" },
+                { "$ref": "$.aBTests[1]" },
+                { "$ref": "$.aBTests[2]" },
+                { "$ref": "$.aBTests[3]" },
+                { "$ref": "$.aBTests[4]" },
+                { "$ref": "$.aBTests[5]" },
+                { "$ref": "$.aBTests[6]" }
+            ],
+            "arrivalAirportCode": "KMG",
+            "arrivalCityCode": "KMG",
+            "arriveDate": "2026-07-30",
+            "arriveTime": "00:20",
+            "departDate": "2026-07-29",
+            "departTime": "21:55",
+            "departureAirportCode": "CAN",
+            "departureCityCode": "CAN",
+            "diyIsClosed": false,
+            "entrance": 0,
+            "flightNo": "CZ3419",
+            "linkTrackerId": "",
+            "passengerType": 0,
+            "plat": 852,
+            "refId": 319527329,
+            "requestContext": {},
+            "stageNo": 2,
+            "tag": "ZtYxLgD8gfr1KLexC4RbJDer88HPig7eEzEi6vrmjQrCdoEazcS3DPw0QIV6A0ffXVTFzQCxTUISPF28kE2zzm2wsV3Ac6fXoIh98yRjCC5ODWhTLVgkrvkxERzMAh7Y1QlJO4VzPHGkQAcKNkyOroP",
+            "user": { "$ref": "$.flightParamList[0].user" }
+        }
+    ],
+    "flowKey": "上海@昆明@2026-07-29",
+    "from": "上海",
+    "frontCaller": "seatJoin",
+    "hKTrain": false,
+    "lowestPrice": 580,
+    "mustRcmdSeat": false,
+    "needNearTrain": false,
+    "partnerId": "HX-2",
+    "passenger": {
+        "adultCount": "1",
+        "childCount": "0",
+        "infantCount": "0"
+    },
+    "platId": "852",
+    "priceStyle": [],
+    "refId": "319527329",
+    "resourceType": 8,
+    "sameTrainExcludeDiffSeat": false,
+    "sameTrainPlan": false,
+    "tfDeduce": false,
+    "to": "昆明",
+    "traceId": "06a0e536eee22b31920effd8889a4ea7",
+    "typeCode": "FF",
+    "user": { "$ref": "$.flightParamList[0].user" }
+}
