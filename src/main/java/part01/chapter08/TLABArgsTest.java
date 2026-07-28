@@ -4,7 +4,7 @@ public class TLABArgsTest {
 
     /**
      *
-     * 测试-XX:UseTLAB参数是否开启的情况
+     * 测试-XX:+UseTLAB参数是否开启的情况
      *
      * jinfo -flag UseTLAB pid 查看线程的TLAB是否开启
      * @param args

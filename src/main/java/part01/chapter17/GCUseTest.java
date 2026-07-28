@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * -XX:+UseParNewGC 参数可以指定年轻代使用并行收集器，老年代使用Serial Old收集器
  *
  * -XX:+UseConcMarkSweepGC 参数可以指定年轻代使用并行收集器（ParNewGC），老年代使用CMS收集器
- * -XX:CMSLnitiatingOccupancyFraction=70 设置老年代使用CMS收集器的启动阈值为70%
+ * -XX:CMSInitiatingOccupancyFraction=70 设置老年代使用CMS收集器的启动阈值为70%
  * -XX:+UseCMSCompactAtFullCollection 设置在CMS收集器进行Full GC时是否压缩碎片;停顿时间会增长
  * -XX:+CMSFullGCsBeforeCompaction 设置在CMS收集器进行Full GC时，多少次Full GC后进行压缩碎片
  * -XX:ParallelCMSThreads=4 设置CMS收集器的并发线程数为4
@@ -30,7 +30,7 @@ import java.util.ArrayList;
  * -XX:G1HeapRegionSize=16m 设置G1收集器的堆区域大小为16MB，取值范围是1MB~32MB，必须是2的N次方,目标是根据堆内存大小来设置区域大小，以保证区域数量在2048个左右；默认是堆内存的1/2048
  * -XX:MaxGCPauseMillis=200 设置最大暂停时间为200ms，jvm会尽力实现，但不保证一定能实现
  * -XX:ParallelGCThreads=8 设置并行GC线程数为8,最多设置为8
- * -XX:ConcGCThreads=4 设置并发GC线程数为4，最多设置为4
+ * -XX:ConcGCThreads=4 设置并发GC线程数为4（建议约为 ParallelGCThreads 的 1/4）
  * -XX:InitiatingHeapOccupancyPercent=45 设置G1收集器的并发标记周期的启动阈值为45%。默认值是45
  *
  * @author feixuanyu

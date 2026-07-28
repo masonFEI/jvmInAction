@@ -9,7 +9,7 @@ package part01.chapter05;
  *
  * 局部变量在方法内部产生，方法内部消亡，是线程安全的；局部变量被方法返回出去的，是不安全的。
  */
-public class StringBuilderTets {
+public class StringBuilderTest {
 
     // s1的声明方式是线程安全的
     public static void method1() {

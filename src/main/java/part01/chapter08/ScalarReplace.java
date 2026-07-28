@@ -2,7 +2,7 @@ package part01.chapter08;
 
 /**
  * 标量替换测试
- * -Xms100m -Xmx100m -XX:+DoEscapeAnalysis -XX:PrintGC -XX:-EliminateAllocations
+ * -Xms100m -Xmx100m -XX:+DoEscapeAnalysis -XX:+PrintGC -XX:-EliminateAllocations
  */
 public class ScalarReplace {
 
