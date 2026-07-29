@@ -83,7 +83,7 @@ public class MyClassLoader extends ClassLoader {
             throw new RuntimeException(e);
         } finally {
             try {
-                if (baos != null) {
+                if (bis != null) {
                     bis.close();
                 }
             } catch (IOException e) {
@@ -96,8 +96,6 @@ public class MyClassLoader extends ClassLoader {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
-            return null;
         }
 
     }

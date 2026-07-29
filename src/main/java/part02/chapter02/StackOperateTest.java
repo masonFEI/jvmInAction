@@ -27,7 +27,7 @@ public class StackOperateTest {
         return 0;
     }
 
-    public long nexIndex() {
+    public long nextIndex() {
         return index++;
     }
 

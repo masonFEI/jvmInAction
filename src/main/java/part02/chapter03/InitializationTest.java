@@ -5,7 +5,7 @@
 package part02.chapter03;
 
 /**
- * InitiallizationTest
+ * InitializationTest
  *
  * @author feixuanyu
  * @version 1.0.0

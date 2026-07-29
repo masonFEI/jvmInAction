@@ -42,7 +42,7 @@ public class MethodInvokeReturnTest {
 
     }
 
-    // 方法调用指令：invokeinterface:静态分派
+    // 方法调用指令：invokeinterface:动态分派
     public void invoke3() {
         Thread t1 = new Thread();
         ((Runnable) t1).run();

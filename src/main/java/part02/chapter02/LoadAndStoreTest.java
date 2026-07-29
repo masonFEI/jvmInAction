@@ -14,7 +14,7 @@ import javax.xml.crypto.Data;
  * @since 2026-02-01 13:39
  */
 public class LoadAndStoreTest {
-    // 1.局部遍历压栈指令
+    // 1.局部变量压栈指令
     public void load(int num, Object obj, long count, boolean flag, short[] arr) {
         System.out.println(num);
         System.out.println(obj);

@@ -63,7 +63,7 @@ public class ArithmeticTest {
         int b = ++j;
     }
 
-    public void nethod8() {
+    public void method8() {
         int i = 10;
         i = i++;
         System.out.println(i);// 10
