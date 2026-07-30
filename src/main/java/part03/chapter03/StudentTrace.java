@@ -16,7 +16,7 @@ import java.util.Objects;
  * @version 1.0.0
  * @since 2026-03-22 22:16
  */
-public class StudentTrance {
+public class StudentTrace {
     static List<WebPage> webPages = new ArrayList<WebPage>();
 
     public static void createWebPage() {
